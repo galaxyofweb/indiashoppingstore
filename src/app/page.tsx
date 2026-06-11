@@ -1,37 +1,19 @@
-import type { Metadata } from 'next'
-import { HeroSection } from '@/components/home/HeroSection'
-import { TrustBar } from '@/components/home/TrustBar'
-import { FeaturedCategories } from '@/components/home/FeaturedCategories'
-import { BestSellers } from '@/components/home/BestSellers'
-import { NewArrivals } from '@/components/home/NewArrivals'
-import { TrendingSection } from '@/components/home/TrendingSection'
-import { BrandStory } from '@/components/home/BrandStory'
-import { CustomerReviews } from '@/components/home/CustomerReviews'
-import { BlogArticles } from '@/components/home/BlogArticles'
-import { InstagramGallery } from '@/components/home/InstagramGallery'
-import { NewsletterSection } from '@/components/home/NewsletterSection'
-import { PromoBanner } from '@/components/home/PromoBanner'
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'IndiaShoppingStore — Premium Shopping, Indian Prices',
-  description: 'Discover 50,000+ premium products across fashion, electronics, home decor and more. Free shipping above ₹499.',
-}
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="page-enter">
-      <HeroSection />
-      <TrustBar />
-      <FeaturedCategories />
-      <BestSellers />
-      <PromoBanner />
-      <NewArrivals />
-      <BrandStory />
-      <TrendingSection />
-      <CustomerReviews />
-      <BlogArticles />
-      <InstagramGallery />
-      <NewsletterSection />
-    </div>
-  )
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white text-black">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <h1 className="text-4xl font-bold mb-8">Welcome to India Shopping Store</h1>
+        <p className="text-xl text-gray-600">Your store is successfully connected and running!</p>
+      </div>
+      
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left gap-4">
+        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors border-gray-300 bg-gray-100">
+          <h2 className="mb-3 text-2xl font-semibold">Products</h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">Browse our latest collection of amazing products.</p>
+        </div>
+      </div>
+    </main>
+  );
 }
